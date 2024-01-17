@@ -1,0 +1,50 @@
+/* Color, size and location of different parts of the page */
+h1 
+    {color: #560183; text-align: center
+}
+header {
+    display: inline;
+    vertical-align:center;
+}
+main {justify-content: start;}
+@font-face { 
+
+    font-family: ultraregular; 
+    
+    src: url(ultraregular.ttf); 
+    
+    }
+    blockquote {font-family: ultraregular, serif; }
+
+/* Grid layout in desktop view*/
+@media screen and (min-width: 760px) {
+
+.container {
+    display: flex;
+    grid-template-areas: 
+        "intro image"
+        "content content"
+        "table table";
+    grid-template-columns:30% 70%;
+    grid-template-rows: 20% 50% 30%;
+    margin: 0em;
+  }
+.part1 {
+    grid-area: image;
+    align-self: left;
+    border: 1em 1em 1em 1em;
+    border-color: blueviolet;
+}
+.part2 {
+    grid-area: intro;
+}
+.part3 {
+    grid-area: content
+}
+.part4 {
+    grid-area: table
+}
+}
+.beg {
+    font-size: 50em;
+}

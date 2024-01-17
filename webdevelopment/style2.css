@@ -1,0 +1,94 @@
+/* Color, size and location of different parts of the page */
+h1 
+    {color: #560183; text-align: center
+}
+header {
+    display: inline;
+    vertical-align:center;
+}
+main {justify-content: start;}
+footer {
+    display: flex;
+    justify-content: center;
+    padding: 5px;
+    background-image: url(footerpic.jpg);
+    width: 100%;
+    color: purple;
+  }
+@font-face { 
+
+    font-family: ultraregular; 
+    
+    src: url(ultraregular.ttf); 
+    
+    }
+    blockquote {font-family: ultraregular, serif; }
+
+/* Grid layout in desktop view*/
+@media screen and (min-width: 760px) {
+.me {width: 10em; height: auto; border-radius: 20%;}
+.container {
+    display: grid;
+    grid-area: 100%;
+    grid-template-areas: 
+       "intro intro image"
+        "content content image"
+        ". table table";
+    grid-template-columns: 20% 60% 20%;
+    grid-template-rows: 30% 35% 35%;
+    float: left;
+    margin: 5px 5px 5px 5px;
+  }
+  .part1 {
+    grid-area: intro;
+}
+.part2 {
+    grid-area: image;
+    
+}
+.part3 {
+    grid-area: content
+}
+.part4 {
+    grid-area: table
+}
+}
+.beg {
+    font-size: 50em;
+}
+
+.excontainer {
+    display: grid;
+    grid-area: 100%;
+    grid-template-areas: 
+       "content1 content1 image1"
+       "image2 content2 content2"
+       "content3 content3 image3";
+    grid-template-columns: 25% 50% 25%;
+    grid-template-rows: 45% 35% 30%;
+    float: left;
+    margin: 5px 5px 5px 5px;
+}
+.expcon1 {grid-area: content1;
+    margin-bottom: 5%;}
+.exppic1 {grid-area: image1;
+padding: 20% 10% 20% 5%;
+}
+.expcon2 {grid-area: content2;
+    margin-bottom: 5%;}
+.exppic2 {grid-area: image2;
+padding: 20% 10% 20% 5%;
+}
+.expcon3 {grid-area: content3;}
+.exppic3 {grid-area: image3;
+padding: 20% 10% 20% 5%;
+}
+
+input[type=submit] {
+    background-color: #4ff0b5;
+    color: black;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 10%;
+    font-size: 18px;
+  }
